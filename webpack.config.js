@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 const TerserPlugin = require("terser-webpack-plugin")
+const tailwindcss = require('tailwindcss');
 
 module.exports = {
   entry: {
@@ -33,7 +34,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
@@ -46,25 +47,20 @@ module.exports = {
                     "postcss-preset-env",
                     {
                       browsers: "last 2 versions"
-                    }
+                    },
                   ],
+                  tailwindcss
                 ],
               }
             }
-          },
-          "sass-loader"
+          }
         ]
       },
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
-          options: {
-            presets: [
-              "@babel/preset-env"
-            ]
-          }
+          loader: "ts-loader"
         }
       }
     ],

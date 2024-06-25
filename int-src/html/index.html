@@ -51,11 +51,38 @@
         <div
           class="absolute inset-0 -z-10 after:absolute after:inset-0 after:bg-black after:opacity-80"
         >
-          <img
-            src="https://images.unsplash.com/photo-1531152369337-1d0b0b9ef20d?w=1920&h=320&fit=crop"
-            alt=""
-            class="absolute h-full w-full object-cover"
-          />
+          <picture>
+            <source
+              media="(min-width: 1280px)"
+              srcset="
+                https://images.unsplash.com/photo-1531152369337-1d0b0b9ef20d?w=1920&h=320&fit=crop
+              "
+            />
+            <source
+              media="(min-width: 1024px)"
+              srcset="
+                https://images.unsplash.com/photo-1531152369337-1d0b0b9ef20d?w=1280&h=320&fit=crop
+              "
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="
+                https://images.unsplash.com/photo-1531152369337-1d0b0b9ef20d?w=1024&h=320&fit=crop
+              "
+            />
+            <source
+              media="(min-width: 320px)"
+              srcset="
+                https://images.unsplash.com/photo-1531152369337-1d0b0b9ef20d?w=768&h=320&fit=crop
+              "
+            />
+            <img
+              class="absolute h-full w-full object-cover"
+              src="https://images.unsplash.com/photo-1531152369337-1d0b0b9ef20d?w=1920&h=320&fit=crop"
+              alt=""
+              loading="lazy"
+            />
+          </picture>
         </div>
         <div
           class="container mx-auto flex h-80 flex-col items-center justify-center p-5 text-center text-white md:items-start md:text-left"

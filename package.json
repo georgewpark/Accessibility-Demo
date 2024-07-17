@@ -2,12 +2,19 @@
   "scripts": {
     "dev": "webpack serve --mode=development --devtool source-map",
     "build": "webpack --mode=development --devtool source-map",
-    "prod": "webpack --mode=production"
+    "prod": "webpack --mode=production",
+    "test": "npx playwright test",
+    "test-ui": "npx playwright test --ui",
+    "test-report": "npx playwright show-report"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.9.1",
+    "@playwright/test": "^1.45.2",
+    "@types/node": "^20.14.11",
+    "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.0",
-    "html-loader": "^0.5.5",
+    "html-loader": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.9.0",
     "postcss": "^8.4.39",

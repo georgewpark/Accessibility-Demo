@@ -3,22 +3,23 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const tailwindcss = require('tailwindcss')
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'int-src/index.js'),
+    app: path.resolve(__dirname, 'int-src/index.js')
   },
   output: {
     path: path.resolve(__dirname, 'int-dist'),
     filename: 'js/[name].js',
-    clean: true,
+    clean: true
   },
   devServer: {
     port: 3000,
     open: true,
     hot: true,
-    historyApiFallback: true,
+    historyApiFallback: true
   },
   module: {
     rules: [
@@ -26,12 +27,9 @@ module.exports = {
         test: /\.html$/,
         use: [
           {
-            loader: 'html-loader',
-            options: {
-              interpolate: true,
-            },
-          },
-        ],
+            loader: 'html-loader'
+          }
+        ]
       },
       {
         test: /\.css$/,
@@ -46,36 +44,40 @@ module.exports = {
                   [
                     'postcss-preset-env',
                     {
-                      browsers: 'last 2 versions',
-                    },
+                      browsers: 'last 2 versions'
+                    }
                   ],
-                  tailwindcss,
-                ],
-              },
-            },
-          },
-        ],
+                  tailwindcss
+                ]
+              }
+            }
+          }
+        ]
       },
       {
         test: /\.ts$/,
         exclude: /node_modules/,
         use: {
-          loader: 'ts-loader',
-        },
-      },
-    ],
+          loader: 'ts-loader'
+        }
+      }
+    ]
   },
   optimization: {
-    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()],
+    minimizer: [new TerserPlugin(), new CssMinimizerPlugin()]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
+      filename: 'css/[name].css'
     }),
     new HtmlWebpackPlugin({
       template: 'int-src/html/index.html',
-      minify: false,
-      hash: true,
+      hash: true
     }),
-  ],
+    new CopyPlugin({
+      patterns: [
+        { from: './int-src/playwright-report', to: './playwright-report' }
+      ]
+    })
+  ]
 }

@@ -3,6 +3,7 @@
   "singleQuote": true,
   "jsxSingleQuote": true,
   "arrowParens": "avoid",
+  "trailingComma": "none",
   "tailwindConfig": "./tailwind.config.js",
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"]
 }

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
 
 test.describe('homepage', () => {
-  test('should not have any automatically detectable WCAG A or AA accessibility issues', async ({
+  test('should not have any automatically detectable WCAG 2.2 A or AA failures', async ({
     page
   }) => {
     await page.goto('./')
@@ -26,7 +26,9 @@ test.describe('homepage', () => {
     expect(wcagScanResults.violations).toEqual([])
   })
 
-  test('should follow common accessibility best practice', async ({ page }) => {
+  test('should follow common accessibility best practice (excluding WCAG 2.2 failures)', async ({
+    page
+  }) => {
     await page.goto('./')
 
     const bestPractiseScanResults = await new AxeBuilder({ page })

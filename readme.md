@@ -1,4 +1,4 @@
-# Accessibility Demo
+# Accessibility Testing Demo
 
 This site has been created as part of a technical talk and contains accessibility issues to demonstrate how to perform an accessibility review to identify these issues and determine appropriate fixes:
 

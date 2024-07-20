@@ -30,3 +30,5 @@ This will start the dev server automatically and scan the page for accessibility
 A report will be generated and if any accessibility issues are identified then the report will be automatically opened.
 
 The report can be viewed at any time by running `npm run test-report` or when running the dev server by accessing the page directly at `/playwright-report` which an example is available to view on the [demo site](https://eqtr-accessibility-demo.netlify.app/playwright-report/).
+
+Additionally a JSON version of the test report can be accessed at `/test-data/test-data.json` which an example is available to view on the [demo site](https://eqtr-accessibility-demo.netlify.app/test-data/test-data.json).

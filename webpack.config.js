@@ -76,7 +76,8 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: './int-src/playwright-report', to: './playwright-report' }
+        { from: './int-src/playwright-report', to: './playwright-report' },
+        { from: './int-src/test-data', to: './test-data' }
       ]
     })
   ]

@@ -21,7 +21,7 @@ You can build the files without starting the dev server by running `npm run buil
 
 ## Playwright
 
-Playwright is used to perform automated accessibility testing using Axe Core.
+Playwright is used to perform automated accessibility testing with the Axe Core API.
 
 From the root directory, begin the accessibility audit by running `npm run test` from the terminal.
 

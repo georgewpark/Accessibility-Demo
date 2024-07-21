@@ -13,7 +13,7 @@
     />
     <title>Accessibility Audit Demo</title>
   </head>
-  <body class="text-slate-900">
+  <body class="text-indigo-950">
     <header class="sticky top-0 z-10 bg-white shadow">
       <div
         class="container mx-auto flex flex-col items-center justify-between gap-4 px-5 py-4 md:flex-row md:py-5"
@@ -30,7 +30,7 @@
             <li>
               <a
                 href="/"
-                class="text-lg font-semibold text-slate-900 hover:text-indigo-900"
+                class="text-lg font-semibold text-indigo-950 hover:text-indigo-800"
               >
                 About
               </a>
@@ -38,7 +38,7 @@
             <li>
               <a
                 href="/"
-                class="text-lg font-semibold text-slate-900 hover:text-indigo-900"
+                class="text-lg font-semibold text-indigo-950 hover:text-indigo-800"
               >
                 News
               </a>
@@ -46,7 +46,7 @@
             <li>
               <a
                 href="/"
-                class="text-lg font-semibold text-slate-900 hover:text-indigo-900 focus:outline-0"
+                class="text-lg font-semibold text-indigo-950 hover:text-indigo-800 focus:outline-0"
               >
                 Contact
               </a>
@@ -94,7 +94,7 @@
           </picture>
         </div>
         <div
-          class="container mx-auto flex h-96 flex-col items-center justify-center p-5 text-center text-white"
+          class="container mx-auto flex min-h-96 flex-col items-center justify-center p-5 text-center text-white"
         >
           <h2 class="mb-5 text-4xl font-bold md:text-5xl">Hero Title</h2>
           <p class="mb-6 max-w-2xl text-lg">
@@ -137,13 +137,13 @@
           </p>
           <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-10">
             <div
-              class="grow rounded border border-solid border-slate-300 bg-slate-50"
+              class="grow overflow-hidden rounded border border-solid border-slate-300 bg-slate-50"
             >
-              <div class="h-44 overflow-hidden">
+              <div class="relative h-44">
                 <img
                   src="https://www.eqtr.com/media/v23bvlel/_c4a9536.jpg?quality=90&width=600&format=jpg&mode=max"
                   alt="a dog riding a skateboard"
-                  class="h-full w-full object-cover"
+                  class="absolute h-full w-full object-cover"
                 />
               </div>
               <div class="p-5">
@@ -178,13 +178,13 @@
               </div>
             </div>
             <div
-              class="grow rounded border border-solid border-slate-300 bg-slate-50"
+              class="grow overflow-hidden rounded border border-solid border-slate-300 bg-slate-50"
             >
-              <div class="h-44 overflow-hidden">
+              <div class="relative h-44">
                 <img
                   src="https://www.eqtr.com/media/ydnbu5zb/eqtr_track_record.jpg?quality=90&width=600&format=jpg&mode=max"
                   alt=""
-                  class="h-full w-full object-cover"
+                  class="absolute h-full w-full object-cover"
                 />
               </div>
               <div class="p-5">
@@ -198,7 +198,6 @@
                   href="#"
                   class="inline-flex items-center gap-2.5 rounded-md border border-solid border-indigo-700 px-4 py-3 font-semibold text-indigo-900 shadow transition-colors hover:bg-indigo-900 hover:text-indigo-50 focus:bg-indigo-900 focus:text-indigo-50"
                 >
-                  Card 2 CTA
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -218,12 +217,12 @@
               </div>
             </div>
             <div
-              class="grow rounded border border-solid border-slate-300 bg-slate-50"
+              class="grow overflow-hidden rounded border border-solid border-slate-300 bg-slate-50"
             >
-              <div class="h-44 overflow-hidden">
+              <div class="relative h-44">
                 <img
                   src="https://www.eqtr.com/media/djynivmp/home_services_card_6.jpg?quality=90&width=600&format=jpg&mode=max"
-                  class="h-full w-full object-cover"
+                  class="absolute h-full w-full object-cover"
                 />
               </div>
               <div class="p-5">
